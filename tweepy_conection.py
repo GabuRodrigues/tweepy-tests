@@ -15,6 +15,11 @@ auth = tweepy.OAuth1UserHandler(
 
 api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
-for tweet in public_tweets:
+search_tweets = api.search_tweets(q='#pokemon', lang='pt', result_type='mixed', count=20)
+
+for tweet in search_tweets:
+    print(f"{tweet.user.name} tweeted: ")
     print(tweet.text)
+    print(f"# of likes: {tweet.favorite_count}")
+    print(f'# of retweets: {tweet.retweet_count}')
+    print("-------------------------------------------------------------------------------")
