@@ -103,7 +103,7 @@ celerybeat.pid
 
 # Environments
 .env
-.venv
+.venv-tweepy
 env/
 venv/
 ENV/
@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 #credentials
-.credentials.json
+credentials.json
